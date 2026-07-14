@@ -113,7 +113,6 @@ function RegisterPageContent() {
             <div className="bg-teal-900/5 rounded-xl p-4 text-left border border-teal-900/10 space-y-2">
               <p className="text-xs text-ink-900/70"><span className="font-semibold text-teal-900">Name:</span> {submittedData?.name}</p>
               <p className="text-xs text-ink-900/70"><span className="font-semibold text-teal-900">Email:</span> {submittedData?.email}</p>
-              <p className="text-xs text-ink-900/70"><span className="font-semibold text-teal-900">Track:</span> {submittedData?.track === "professional" ? "Professional Pathway" : "Parent Pathway"}</p>
             </div>
 
             <div className="space-y-3">
