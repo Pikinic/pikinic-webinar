@@ -34,14 +34,14 @@ export default function Homepage() {
                 <Reveal delay={100} duration={500}>
                   <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-wider text-teal-900 bg-teal-900/5 border border-teal-900/10">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                    The 24-hour admissions system
+                    Live webinar with Adeniyi Akitoye (MD, PiKiNiC) &amp; Adesope Mary (Student Advisor)
                   </span>
                 </Reveal>
  
                 {/* Headline */}
                 <Reveal delay={200} duration={600}>
                   <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-teal-900 tracking-tight leading-[1.05] font-sans">
-                    The <span className="text-red-500 relative inline-block">24-Hour System<span className="absolute bottom-1 left-0 w-full h-[6px] bg-yellow-400 -z-10" /></span> Nigerian Professionals And Parents Are Using To Get UK University Offers — Before The September Intake Closes
+                    The <span className="text-red-500 relative inline-block">24-Hour System<span className="absolute bottom-1 left-0 w-full h-[6px] bg-yellow-400 -z-10" /></span> Nigerian Applicants Use To Get UK University Offers — Before The September Intake Closes
                   </h1>
                 </Reveal>
  
@@ -103,32 +103,41 @@ export default function Homepage() {
         {/* Trust Bar Section */}
         <section className="bg-cream-50 py-12 border-b border-teal-900/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-12 divide-y sm:divide-y-0 sm:divide-x divide-teal-900/10 text-center sm:text-left py-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-y-0 lg:divide-x divide-teal-900/10 text-center lg:text-left py-4">
               {/* Stat 1 */}
-              <div className="flex flex-col items-center sm:items-start sm:pl-4 sm:pr-8 py-4 sm:py-0">
+              <div className="flex flex-col items-center lg:items-start lg:pl-4 lg:pr-8 py-2">
                 <span className="font-mono text-3xl md:text-4xl font-bold text-teal-900">
-                  142
+                  482
                 </span>
-                <span className="text-xs md:text-sm text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
-                  UK University Offers Secured
+                <span className="text-xs text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
+                  Students Enrolled
                 </span>
               </div>
               {/* Stat 2 */}
-              <div className="flex flex-col items-center sm:items-start sm:px-8 py-4 sm:py-0">
+              <div className="flex flex-col items-center lg:items-start lg:px-8 py-2">
                 <span className="font-mono text-3xl md:text-4xl font-bold text-teal-900">
-                  24h
+                  98%
                 </span>
-                <span className="text-xs md:text-sm text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
-                  Average Application Turnaround
+                <span className="text-xs text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
+                  Visa Success Rate
                 </span>
               </div>
               {/* Stat 3 */}
-              <div className="flex flex-col items-center sm:items-start sm:px-8 py-4 sm:py-0">
+              <div className="flex flex-col items-center lg:items-start lg:px-8 py-2">
                 <span className="font-mono text-3xl md:text-4xl font-bold text-teal-900">
-                  600+
+                  27
                 </span>
-                <span className="text-xs md:text-sm text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
-                  Nigerian Students & Families Advised
+                <span className="text-xs text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
+                  University Partnerships
+                </span>
+              </div>
+              {/* Stat 4 */}
+              <div className="flex flex-col items-center lg:items-start lg:pl-8 py-2">
+                <span className="font-mono text-3xl md:text-4xl font-bold text-teal-900">
+                  12
+                </span>
+                <span className="text-xs text-ink-900/70 mt-1.5 uppercase tracking-wider font-semibold">
+                  Certified Counselors
                 </span>
               </div>
             </div>
@@ -145,10 +154,10 @@ export default function Homepage() {
                 Choose Your Pathway
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-900 mt-2 tracking-tight">
-                Two tracks, designed for your specific UK admissions needs
+                Two ways to secure your admission
               </h2>
               <p className="text-ink-900/70 mt-4 text-base md:text-lg leading-relaxed">
-                Applying for yourself is a completely different process than sponsoring a child. Select the path that fits you to see the customized milestones we guide you through.
+                Choose the track that fits your decision style and immediate pain point.
               </p>
             </div>
  
@@ -167,7 +176,7 @@ export default function Homepage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-red-500">
-                    Professionals
+                    Fast Track
                   </span>
                 </div>
  
@@ -175,24 +184,24 @@ export default function Homepage() {
                 <div className="p-8 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-2xl font-bold text-teal-900 group-hover:text-red-500 transition-colors">
-                      For Professionals — the fast version
+                      &ldquo;I want this handled fast&rdquo;
                     </h3>
                     <p className="text-ink-900/70 mt-4 leading-relaxed">
-                      Designed for mid-career professionals looking to leverage their work experience to bypass standard exams, secure waivers, and settle quickly in the UK.
+                      For time-poor applicants who want the direct outcome without the research burden. Focus on speed and direct results.
                     </p>
                     
                     <ul className="mt-8 space-y-4 text-sm text-ink-900/80">
                       <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 text-xs font-bold">✓</span>
-                        <span>Learn how to secure IELTS waivers using work history</span>
+                        <span>Get direct answers on which courses and universities match your career goals fastest</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 text-xs font-bold">✓</span>
-                        <span>Target courses optimized for work permits (MBA, Tech, conversion courses)</span>
+                        <span>Bypass standard bottlenecks: learn how to secure IELTS waivers using work history</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 text-xs font-bold">✓</span>
-                        <span>Fast-track admission routes without study gap objections</span>
+                        <span>Accelerate the application: submit pre-screened files directly to admissions officers</span>
                       </li>
                     </ul>
                   </div>
@@ -202,7 +211,7 @@ export default function Homepage() {
                       href="/webinar/register?track=professional"
                       className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full text-sm font-bold text-white bg-red-500 hover:bg-red-500/90 active:scale-[0.98] transition-all group/link shadow-md shadow-red-500/5"
                     >
-                      Register for Professional Track
+                      Choose Fast Track
                       <span className="ml-2 transform group-hover/link:translate-x-0.5 transition-transform">→</span>
                     </Link>
                   </div>
@@ -221,7 +230,7 @@ export default function Homepage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                   <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-orange-500">
-                    Parents & Sponsors
+                    Full Detail
                   </span>
                 </div>
  
@@ -229,24 +238,24 @@ export default function Homepage() {
                 <div className="p-8 flex flex-col justify-between flex-grow">
                   <div>
                     <h3 className="text-2xl font-bold text-teal-900 group-hover:text-orange-500 transition-colors">
-                      For Parents — the full picture
+                      &ldquo;I want to understand every step&rdquo;
                     </h3>
                     <p className="text-ink-900/70 mt-4 leading-relaxed">
-                      Designed for parents seeking full transparency, detailed CAS timelines, tuition breakdowns, and trusted boarding/visa guidance for their child.
+                      For sponsors and applicants who need the complete cost, fee, and risk picture before trusting a remote process. Focus on transparency.
                     </p>
                     
                     <ul className="mt-8 space-y-4 text-sm text-ink-900/80">
                       <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 text-xs font-bold">✓</span>
-                        <span>Tuition fee breakdowns, living costs, and payment schedules</span>
+                        <span>Inspect detailed tuition fee breakdowns, hidden living costs, and payment timelines</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 text-xs font-bold">✓</span>
-                        <span>How to compile bulletproof proof of funds without locking capital</span>
+                        <span>Compile bulletproof proof of funds without locking up capital unnecessarily</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <span className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 text-xs font-bold">✓</span>
-                        <span>Direct connection with admissions teams to ensure student safety</span>
+                        <span>Establish direct communication with UK university counselors to ensure student safety</span>
                       </li>
                     </ul>
                   </div>
@@ -256,7 +265,7 @@ export default function Homepage() {
                       href="/webinar/register?track=parent"
                       className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full text-sm font-bold text-white bg-orange-500 hover:bg-orange-500/90 active:scale-[0.98] transition-all group/link shadow-md shadow-orange-500/5"
                     >
-                      Register for Parent Track
+                      Choose Full Detail Track
                       <span className="ml-2 transform group-hover/link:translate-x-0.5 transition-transform">→</span>
                     </Link>
                   </div>
@@ -540,7 +549,7 @@ export default function Homepage() {
                 <span className="text-6xl text-teal-900/20 font-serif absolute top-4 right-6 select-none pointer-events-none">&ldquo;</span>
                 
                 <p className="text-cream-50/80 leading-relaxed italic text-base relative z-10 pt-4">
-                  &ldquo;The work-experience waiver guidance was exactly what I needed. I didn&apos;t have to write IELTS, and the admissions process was incredibly fast. Highly recommended!&rdquo;
+                  &ldquo;The work-experience waiver guidance was exactly what I needed. I didn&apos;t have to write IELTS, and the admissions process was incredibly fast. Highly recommended.&rdquo;
                 </p>
                 <div className="mt-8 pt-4 border-t border-teal-900/20 flex items-center justify-between z-10">
                   <div>

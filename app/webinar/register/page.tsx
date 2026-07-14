@@ -104,7 +104,7 @@ function RegisterPageContent() {
             </div>
             
             <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-teal-900">Registration Successful!</h3>
+              <h3 className="text-2xl font-bold text-teal-900">Registration Successful</h3>
               <p className="text-sm text-ink-900/70 leading-relaxed">
                 Welcome to the PiKiNiC Webinar. We have reserved your seat for the live session.
               </p>
@@ -271,7 +271,7 @@ function RegisterPageContent() {
           </div>
           
           <div className="space-y-2">
-            <h3 className="text-2xl font-bold text-teal-900">You&apos;re in!</h3>
+            <h3 className="text-2xl font-bold text-teal-900">Seat Confirmed</h3>
             <p className="text-ink-900/80 leading-relaxed max-w-sm mx-auto">
               Check your email for your join link and a reminder before we go live.
             </p>
