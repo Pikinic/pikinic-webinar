@@ -5,7 +5,7 @@
   --color-red-500: #ED3237;
   --color-orange-500: #F58634;
   --color-yellow-400: #FFCA06;
-  --color-cream-50: #ffffff;
+  --color-cream-50: #F7F5EF;
   --color-ink-900: #0C1917;
 
   --font-sans: var(--font-atyp), ui-sans-serif, system-ui, sans-serif;
@@ -18,3 +18,17 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Subtle Hover Scales & Focus States */
+.hover-lift {
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Keyboard Accessibility Focus */
+*:focus-visible {
+  outline: 3px solid var(--color-yellow-400);
+  outline-offset: 2px;
+}
