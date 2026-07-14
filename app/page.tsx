@@ -34,7 +34,7 @@ export default function Homepage() {
                 <Reveal delay={100} duration={500}>
                   <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono tracking-wider text-teal-900 bg-teal-900/5 border border-teal-900/10">
                     <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse" />
-                    Live webinar with Adeniyi Akitoye (MD, PiKiNiC) &amp; Adesope Mary (Student Advisor)
+                    Live webinar with Adeniyi Akitoye (MD, PiKiNiC)
                   </span>
                 </Reveal>
  
@@ -421,11 +421,11 @@ export default function Homepage() {
                   Partnership Network
                 </div>
               </div>
- 
+
             </div>
           </div>
         </section>
- 
+
         {/* Host Credibility Section */}
         <section className="bg-cream-50 py-24 md:py-32 border-b border-teal-900/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -433,21 +433,21 @@ export default function Homepage() {
             {/* Header */}
             <div className="max-w-3xl mx-auto text-center mb-20">
               <span className="text-xs font-mono tracking-widest text-teal-900/60 uppercase">
-                Speakers & Advisory
+                Speaker & Advisory
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-900 mt-2 tracking-tight">
-                Meet Your Webinar Hosts
+                Meet Your Webinar Host
               </h2>
               <p className="text-ink-900/75 mt-3 text-base md:text-lg">
-                Learn directly from the specialists who coordinate admissions directly with UK university representatives.
+                Learn directly from the specialist who coordinates admissions directly with UK university representatives.
               </p>
             </div>
- 
+
             {/* Profile split */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 max-w-5xl mx-auto">
+            <div className="flex justify-center max-w-2xl mx-auto">
               
               {/* Speaker 1 */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 w-full">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-2xl overflow-hidden border border-teal-900/10 bg-white shadow-sm">
                   <Image
                     src="/images/MD-Akitoye1.jpg"
@@ -464,26 +464,7 @@ export default function Homepage() {
                   </p>
                 </div>
               </div>
- 
-              {/* Speaker 2 */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-2xl overflow-hidden border border-teal-900/10 bg-white shadow-sm">
-                  <Image
-                    src="/images/Adesope-Mary1.jpg"
-                    alt="Adesope Mary Portrait"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="text-center sm:text-left flex-grow">
-                  <h4 className="text-xl font-bold text-teal-900">Adesope Mary</h4>
-                  <p className="text-xs font-mono text-orange-500 font-bold uppercase tracking-wider mt-1">Student Advisor</p>
-                  <p className="text-sm text-ink-900/70 mt-3 leading-relaxed">
-                    Adesope has advised hundreds of Nigerian students on university selection, document readiness, and CAS processing. Her direct relationships with UK admissions offices ensure fast turnaround times.
-                  </p>
-                </div>
-              </div>
- 
+
             </div>
           </div>
         </section>
