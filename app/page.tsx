@@ -441,7 +441,7 @@ export default function Homepage() {
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-2xl overflow-hidden border border-teal-900/10 bg-white shadow-sm">
                   <Image
-                    src="/images/adeniyi_portrait.jpg"
+                    src="/images/MD-Akitoye1.jpg"
                     alt="Mr. Adeniyi Akitoye Portrait"
                     fill
                     className="object-cover"
@@ -460,7 +460,7 @@ export default function Homepage() {
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-2xl overflow-hidden border border-teal-900/10 bg-white shadow-sm">
                   <Image
-                    src="/images/adesope_portrait.jpg"
+                    src="/images/Adesope-Mary1.jpg"
                     alt="Adesope Mary Portrait"
                     fill
                     className="object-cover"
