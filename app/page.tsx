@@ -444,22 +444,27 @@ export default function Homepage() {
             </div>
 
             {/* Profile split */}
-            <div className="flex justify-center max-w-2xl mx-auto">
+            <div className="flex justify-center max-w-3xl mx-auto">
               
               {/* Speaker 1 */}
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6 w-full">
-                <div className="relative w-28 h-28 sm:w-32 sm:h-32 flex-shrink-0 rounded-2xl overflow-hidden border border-teal-900/10 bg-white shadow-sm">
-                  <Image
-                    src="/images/MD-Akitoye1.jpg"
-                    alt="Mr. Adeniyi Akitoye Portrait"
-                    fill
-                    className="object-cover"
-                  />
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 w-full">
+                <div className="relative group flex-shrink-0">
+                  {/* Premium offset background border */}
+                  <div className="absolute inset-0 bg-teal-900/5 rounded-3xl translate-x-2 translate-y-2 transition-transform group-hover:translate-x-3 group-hover:translate-y-3 duration-300" />
+                  <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 flex-shrink-0 rounded-3xl overflow-hidden border-2 border-teal-900/10 bg-white shadow-md transition-transform duration-300 group-hover:scale-[1.01]">
+                    <Image
+                      src="/images/MD-Akitoye1.JPEG"
+                      alt="Mr. Adeniyi Akitoye Portrait"
+                      fill
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
                 </div>
-                <div className="text-center sm:text-left flex-grow">
-                  <h4 className="text-xl font-bold text-teal-900">Mr Adeniyi Akitoye</h4>
+                <div className="text-center md:text-left flex-grow mt-4 md:mt-2">
+                  <h4 className="text-2xl font-bold text-teal-900 tracking-tight">Mr Adeniyi Akitoye</h4>
                   <p className="text-xs font-mono text-red-500 font-bold uppercase tracking-wider mt-1">Managing Director, PiKiNiC</p>
-                  <p className="text-sm text-ink-900/70 mt-3 leading-relaxed">
+                  <p className="text-base text-ink-900/75 mt-4 leading-relaxed">
                     With a background in Nigerian corporate banking, Adeniyi understands the financial structures and timelines applicants face. He established PiKiNiC&apos;s direct partner network to bypass standard agency delays.
                   </p>
                 </div>
