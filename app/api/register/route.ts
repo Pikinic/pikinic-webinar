@@ -32,7 +32,7 @@ export async function POST(request: Request) {
     const privateKey = process.env.GOOGLE_PRIVATE_KEY;
     const spreadsheetId = process.env.GOOGLE_SPREADSHEET_ID;
     const scriptUrl = process.env.GOOGLE_SCRIPT_URL;
-    const zohoWebhookUrl = process.env.ZOHO_FLOW_WEBHOOK_URL;
+    const zohoWebhookUrl = process.env.ZOHO_FLOW_WEBHOOK_URL || process.env.ZOHO_WEBHOOK_URL;
 
     console.log("Apps Script Web App URL:", scriptUrl);
     console.log("Zoho Flow Webhook URL configured:", !!zohoWebhookUrl);
