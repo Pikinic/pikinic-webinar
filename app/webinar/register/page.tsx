@@ -4,9 +4,10 @@ import React, { useState, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import Countdown from "../../components/Countdown";
-    import { useForm } from "react-hook-form";
-    import { zodResolver } from "@hookform/resolvers/zod";
-    import { registerSchema, RegisterInput } from "../../schemas/register";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { registerSchema, RegisterInput } from "../../schemas/register";
+import { track } from "@vercel/analytics";
 
 // Fallback skeleton for Suspense boundary while loading search params
 function RegisterFormFallback() {
@@ -24,6 +25,7 @@ function RegisterPageContent() {
   const [showErrorModal, setShowErrorModal] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [submittedData, setSubmittedData] = useState<RegisterInput | null>(null);
+  const [hasTrackedStart, setHasTrackedStart] = useState(false);
 
   const {
     register,
@@ -47,9 +49,21 @@ function RegisterPageContent() {
     if (trackParam === "parent" || trackParam === "professional") {
       setValue("track", trackParam);
     }
+    
+    // Track registration form page view with query params
+    track("Registration Form Viewed", { track: trackParam || "default" });
   }, [searchParams, setValue]);
 
+  const handleFormFocus = () => {
+    if (!hasTrackedStart) {
+      const trackParam = searchParams.get("track") || "default";
+      track("Registration Started", { track: trackParam });
+      setHasTrackedStart(true);
+    }
+  };
+
   const onSubmit = async (data: RegisterInput) => {
+    track("Registration Submission Attempt", { track: data.track });
     try {
       const response = await fetch("/api/register", {
         method: "POST",
@@ -58,16 +72,20 @@ function RegisterPageContent() {
       });
 
       if (response.ok) {
+        track("Registration Successful", { track: data.track });
         setSubmittedData(data);
         setShowSuccessModal(true);
         reset(); // Clear form inputs
       } else {
         const errorData = await response.json();
-        setErrorMessage(errorData.error || "Form submission failed. Please try again.");
+        const errMessage = errorData.error || "Form submission failed. Please try again.";
+        track("Registration Failed", { track: data.track, error: errMessage });
+        setErrorMessage(errMessage);
         setShowErrorModal(true);
       }
     } catch (error) {
       console.error("Submission network error:", error);
+      track("Registration Failed", { track: data.track, error: "Network Error" });
       setErrorMessage("Network error. Please check your internet connection and try again.");
       setShowErrorModal(true);
     }
@@ -120,6 +138,7 @@ function RegisterPageContent() {
                 href={gcalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => track("Add to Calendar Clicked", { track: submittedData?.track || "unknown", modal: "true" })}
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-teal-900 hover:bg-teal-900/90 transition-colors shadow-sm"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -184,6 +203,7 @@ function RegisterPageContent() {
               type="text"
               id="name"
               {...register("name")}
+              onFocus={handleFormFocus}
               placeholder="e.g. Babajide Olusola"
               className="w-full px-4 py-3 rounded-lg border border-teal-900/10 text-ink-900 placeholder-ink-900/30 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
             />
@@ -201,6 +221,7 @@ function RegisterPageContent() {
               type="email"
               id="email"
               {...register("email")}
+              onFocus={handleFormFocus}
               placeholder="e.g. name@example.com"
               className="w-full px-4 py-3 rounded-lg border border-teal-900/10 text-ink-900 placeholder-ink-900/30 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
             />
@@ -222,6 +243,7 @@ function RegisterPageContent() {
                 type="tel"
                 id="whatsapp"
                 {...register("whatsapp")}
+                onFocus={handleFormFocus}
                 placeholder="8031234567"
                 className="w-full px-4 py-3 rounded-r-lg text-ink-900 placeholder-ink-900/30 focus:outline-none"
               />
@@ -242,6 +264,7 @@ function RegisterPageContent() {
             <select
               id="track"
               {...register("track")}
+              onFocus={handleFormFocus}
               className="w-full px-4 py-3 rounded-lg border border-teal-900/10 bg-white text-ink-900 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all"
             >
               <option value="professional">Myself (working professional)</option>
@@ -285,6 +308,7 @@ function RegisterPageContent() {
               href={gcalUrl}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => track("Add to Calendar Clicked", { track: submittedData?.track || "unknown", modal: "false" })}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-teal-900 hover:bg-teal-900/90 transition-colors shadow-sm"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { atyp } from "./font";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "PiKiNiC — Get Your UK University Offer in 24 Hours",
@@ -17,7 +18,10 @@ export default function RootLayout({
       lang="en"
       className={`${atyp.variable} h-full antialiased scroll-smooth`}
     >
-      <body className="min-h-full flex flex-col bg-cream-50 text-ink-900">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream-50 text-ink-900">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
