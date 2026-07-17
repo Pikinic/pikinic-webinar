@@ -465,7 +465,7 @@ export default function Homepage() {
                   <h4 className="text-2xl font-bold text-teal-900 tracking-tight">Mr Adeniyi Akitoye</h4>
                   <p className="text-xs font-mono text-red-500 font-bold uppercase tracking-wider mt-1">Managing Director, PiKiNiC</p>
                   <p className="text-base text-ink-900/75 mt-4 leading-relaxed">
-                    With a background in Nigerian corporate banking, Adeniyi understands the financial structures and timelines applicants face. He established PiKiNiC&apos;s direct partner network to bypass standard agency delays.
+                    A British Council Certified Counselor, NAFSA Certified Counselor, and ICEF Certified Education Counselor, Adeniyi brings extensive expertise in international student travel and global relocation. His background in corporate banking gives him a unique understanding of complex financial requirements like proof of funds, enabling him to build PiKiNiC&apos;s direct partner network to bypass standard bottlenecks.
                   </p>
                 </div>
               </div>
