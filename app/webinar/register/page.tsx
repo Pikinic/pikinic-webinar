@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema, RegisterInput } from "../../schemas/register";
 import { track } from "@vercel/analytics";
+import { sendGAEvent } from "@next/third-parties/google";
 
 // Fallback skeleton for Suspense boundary while loading search params
 function RegisterFormFallback() {
@@ -26,6 +27,14 @@ function RegisterPageContent() {
   const [errorMessage, setErrorMessage] = useState("");
   const [submittedData, setSubmittedData] = useState<RegisterInput | null>(null);
   const [hasTrackedStart, setHasTrackedStart] = useState(false);
+
+  // Combined Vercel + Google Analytics event tracking helper
+  const trackEvent = (eventName: string, params: Record<string, any>) => {
+    // Vercel Analytics
+    track(eventName, params);
+    // Google Analytics
+    sendGAEvent({ event: eventName, ...params });
+  };
 
   const {
     register,
@@ -52,19 +61,19 @@ function RegisterPageContent() {
     }
     
     // Track registration form page view with query params
-    track("Registration Form Viewed", { track: trackParam || "default" });
+    trackEvent("Registration Form Viewed", { track: trackParam || "default" });
   }, [searchParams, setValue]);
 
   const handleFormFocus = () => {
     if (!hasTrackedStart) {
       const trackParam = searchParams.get("track") || "default";
-      track("Registration Started", { track: trackParam });
+      trackEvent("Registration Started", { track: trackParam });
       setHasTrackedStart(true);
     }
   };
 
   const onSubmit = async (data: RegisterInput) => {
-    track("Registration Submission Attempt", { track: data.track });
+    trackEvent("Registration Submission Attempt", { track: data.track });
     
     // Combine countryCode and whatsapp if it doesn't already start with '+'
     const cleanNumber = data.whatsapp.trim();
@@ -86,20 +95,20 @@ function RegisterPageContent() {
       });
 
       if (response.ok) {
-        track("Registration Successful", { track: data.track });
+        trackEvent("Registration Successful", { track: data.track });
         setSubmittedData(data);
         setShowSuccessModal(true);
         reset(); // Clear form inputs
       } else {
         const errorData = await response.json();
         const errMessage = errorData.error || "Form submission failed. Please try again.";
-        track("Registration Failed", { track: data.track, error: errMessage });
+        trackEvent("Registration Failed", { track: data.track, error: errMessage });
         setErrorMessage(errMessage);
         setShowErrorModal(true);
       }
     } catch (error) {
       console.error("Submission network error:", error);
-      track("Registration Failed", { track: data.track, error: "Network Error" });
+      trackEvent("Registration Failed", { track: data.track, error: "Network Error" });
       setErrorMessage("Network error. Please check your internet connection and try again.");
       setShowErrorModal(true);
     }
@@ -138,7 +147,7 @@ function RegisterPageContent() {
             <div className="space-y-2">
               <h3 className="text-2xl font-bold text-teal-900">Registration Successful</h3>
               <p className="text-sm text-ink-900/70 leading-relaxed">
-                Welcome to the PiKiNiC Webinar. We have reserved your seat for the live session.
+                We have reserved your seat for the live session.
               </p>
             </div>
 
@@ -152,7 +161,7 @@ function RegisterPageContent() {
                 href={gcalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => track("Add to Calendar Clicked", { track: submittedData?.track || "unknown", modal: "true" })}
+                onClick={() => trackEvent("Add to Calendar Clicked", { track: submittedData?.track || "unknown", modal: "true" })}
                 className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold text-white bg-teal-900 hover:bg-teal-900/90 transition-colors shadow-sm"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -333,7 +342,7 @@ function RegisterPageContent() {
               href={gcalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => track("Add to Calendar Clicked", { track: submittedData?.track || "unknown", modal: "false" })}
+              onClick={() => trackEvent("Add to Calendar Clicked", { track: submittedData?.track || "unknown", modal: "false" })}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white bg-teal-900 hover:bg-teal-900/90 transition-colors shadow-sm"
             >
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
