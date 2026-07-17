@@ -39,7 +39,8 @@ function RegisterPageContent() {
       name: "",
       email: "",
       whatsapp: "",
-      track: "professional"
+      track: "professional",
+      countryCode: "+234"
     }
   });
 
@@ -64,11 +65,24 @@ function RegisterPageContent() {
 
   const onSubmit = async (data: RegisterInput) => {
     track("Registration Submission Attempt", { track: data.track });
+    
+    // Combine countryCode and whatsapp if it doesn't already start with '+'
+    const cleanNumber = data.whatsapp.trim();
+    const isFullInternational = cleanNumber.startsWith("+");
+    const combinedWhatsapp = isFullInternational 
+      ? cleanNumber 
+      : `${data.countryCode || "+234"}${cleanNumber.replace(/^0/, "")}`;
+
+    const payload = {
+      ...data,
+      whatsapp: combinedWhatsapp
+    };
+
     try {
       const response = await fetch("/api/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       if (response.ok) {
@@ -236,9 +250,20 @@ function RegisterPageContent() {
               WhatsApp Number
             </label>
             <div className="relative flex rounded-lg border border-teal-900/10 focus-within:ring-2 focus-within:ring-yellow-400 focus-within:border-transparent transition-all">
-              <span className="inline-flex items-center px-3 rounded-l-lg border-r border-teal-900/10 bg-teal-900/5 text-ink-900/60 font-mono text-sm">
-                +234
-              </span>
+              <select
+                id="countryCode"
+                {...register("countryCode")}
+                className="inline-flex items-center px-3 rounded-l-lg border-r border-teal-900/10 bg-teal-900/5 text-ink-900/60 font-mono text-sm focus:outline-none cursor-pointer outline-none select-none max-w-[100px]"
+              >
+                <option value="+234">NG (+234)</option>
+                <option value="+44">UK (+44)</option>
+                <option value="+1">US/CA (+1)</option>
+                <option value="+233">GH (+233)</option>
+                <option value="+254">KE (+254)</option>
+                <option value="+27">ZA (+27)</option>
+                <option value="+353">IE (+353)</option>
+                <option value="+61">AU (+61)</option>
+              </select>
               <input
                 type="tel"
                 id="whatsapp"

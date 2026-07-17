@@ -17,15 +17,22 @@ export async function POST(request: Request) {
 
     const { name, email, whatsapp, track } = validation.data;
 
-    // Sanitize WhatsApp number: strip non-digits, leading zeros, and redundant country codes
+    // Sanitize WhatsApp number: strip non-digits and format with proper country code
     let cleanWhatsapp = whatsapp.replace(/\D/g, ""); 
-    if (cleanWhatsapp.startsWith("234")) {
-      cleanWhatsapp = cleanWhatsapp.substring(3);
+    let formattedWhatsapp = "";
+    
+    if (whatsapp.startsWith("+")) {
+      formattedWhatsapp = `+${cleanWhatsapp}`;
+    } else if (cleanWhatsapp.startsWith("234") && cleanWhatsapp.length >= 11) {
+      formattedWhatsapp = `+${cleanWhatsapp}`;
+    } else if (cleanWhatsapp.length === 11 && cleanWhatsapp.startsWith("0")) {
+      formattedWhatsapp = `+234${cleanWhatsapp.substring(1)}`;
+    } else if (cleanWhatsapp.length === 10 && /^[789]/.test(cleanWhatsapp)) {
+      formattedWhatsapp = `+234${cleanWhatsapp}`;
+    } else {
+      // Fallback: prepend '+' to whatever digits are provided
+      formattedWhatsapp = `+${cleanWhatsapp}`;
     }
-    if (cleanWhatsapp.startsWith("0")) {
-      cleanWhatsapp = cleanWhatsapp.substring(1);
-    }
-    const formattedWhatsapp = `+234${cleanWhatsapp}`;
     const timestamp = new Date().toISOString();
 
     const clientEmail = process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL;

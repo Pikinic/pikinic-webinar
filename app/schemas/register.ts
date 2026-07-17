@@ -7,9 +7,10 @@ export const registerSchema = z.object({
   email: z.string()
     .min(1, "Email is required")
     .email("Please enter a valid email address"),
+  countryCode: z.string().optional(),
   whatsapp: z.string()
     .min(1, "WhatsApp number is required")
-    .regex(/^(0)?[789][01]\d{8}$/, "Please enter a valid Nigerian number (e.g. 8031234567 or 08031234567)"),
+    .regex(/^\+?[0-9\s\-()]{7,20}$/, "Please enter a valid phone number (e.g. +234 803 123 4567)"),
   track: z.enum(["professional", "parent", "other"])
 });
 
