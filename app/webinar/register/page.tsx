@@ -396,14 +396,19 @@ export default function RegisterPage() {
 
       {/* Main Form container */}
       <main className="flex-grow flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-xl mx-auto w-full text-center space-y-8 mb-8">
+        <div className="max-w-xl mx-auto w-full text-center space-y-6 mb-8">
           {/* Headline */}
-          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900 tracking-tight">
-            Reserve your seat for the free live session
+          <h2 className="text-3xl sm:text-4xl font-bold text-teal-900 tracking-tight leading-tight">
+            Get Your UK University Offer in 24 to 48 Hours
           </h2>
           
           {/* Subhead */}
-          <p className="text-base text-ink-900/80 font-medium">
+          <p className="text-base sm:text-lg text-ink-900/80 font-medium max-w-lg mx-auto leading-relaxed">
+            Skip months of waiting. Learn the direct admissions system certified counselors are using to secure UK offers before September intake closes.
+          </p>
+
+          {/* Live Session Info Badge */}
+          <p className="text-xs font-mono text-red-500 font-bold uppercase tracking-wider">
             21 July, 8pm WAT — Free · Live · Online
           </p>
 
