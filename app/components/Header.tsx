@@ -68,47 +68,47 @@ export default function Header() {
           </Link>
         </nav>
 
-        {/* Desktop CTA */}
-        <div className="hidden md:flex items-center">
+        {/* Right side Actions (CTA + Mobile Hamburger) */}
+        <div className="flex items-center space-x-2 sm:space-x-3">
           <Link
-            href="/webinar/register"
-            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold text-ink-900 bg-yellow-400 border border-yellow-400 hover:bg-yellow-400/90 hover:border-yellow-400/90 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 transition-all duration-200"
+            href="#register-section"
+            className="inline-flex items-center justify-center px-4 py-2 sm:px-6 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold text-ink-900 bg-yellow-400 border border-yellow-400 hover:bg-yellow-400/90 hover:border-yellow-400/90 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 transition-all duration-200 shadow-sm"
           >
             Register Now
           </Link>
-        </div>
 
-        {/* Mobile Menu Button */}
-        <div className="md:hidden flex items-center">
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            type="button"
-            className="inline-flex items-center justify-center p-2 rounded-md text-teal-900 hover:bg-teal-900/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400"
-            aria-expanded={mobileMenuOpen}
-          >
-            <span className="sr-only">Open main menu</span>
-            {mobileMenuOpen ? (
-              <svg
-                className="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            ) : (
-              <svg
-                className="block h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            )}
-          </button>
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center">
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              type="button"
+              className="inline-flex items-center justify-center p-2 rounded-md text-teal-900 hover:bg-teal-900/5 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-400"
+              aria-expanded={mobileMenuOpen}
+            >
+              <span className="sr-only">Open main menu</span>
+              {mobileMenuOpen ? (
+                <svg
+                  className="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg
+                  className="block h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
@@ -147,15 +147,6 @@ export default function Header() {
           >
             FAQ
           </Link>
-          <div className="pt-4">
-            <Link
-              href="/webinar/register"
-              onClick={closeMenu}
-              className="block w-full text-center py-3 rounded-full text-base font-semibold text-ink-900 bg-yellow-400 hover:bg-yellow-400/90 transition-colors"
-            >
-              Register Now
-            </Link>
-          </div>
         </div>
       </div>
     </header>
