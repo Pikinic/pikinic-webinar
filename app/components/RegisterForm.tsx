@@ -297,7 +297,7 @@ export default function RegisterForm({ defaultTrack, className = "" }: RegisterF
           {/* Form Field: Track selector */}
           <div>
             <label htmlFor="form-track" className="block text-sm font-semibold text-teal-900 mb-1.5">
-              I am registering as:
+              I am registering for:
             </label>
             <select
               id="form-track"
