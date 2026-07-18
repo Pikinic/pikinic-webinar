@@ -64,15 +64,10 @@ export default function Homepage() {
                       href="/webinar/register"
                       className="inline-flex items-center justify-center px-8 py-4 rounded-full text-base font-bold text-white bg-red-500 hover:bg-red-500/95 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-[0_4px_20px_rgba(237,50,55,0.2)] text-center group"
                     >
-                      Save My Free Seat
+                      Register now
                       <span className="ml-2 transform group-hover:translate-x-0.5 transition-transform">→</span>
                     </Link>
-                    <Link
-                      href="#how-it-works"
-                      className="inline-flex items-center justify-center px-6 py-4 rounded-full text-base font-semibold text-teal-900/80 hover:text-teal-900 hover:underline transition-all duration-200 text-center"
-                    >
-                      See how it works ↓
-                    </Link>
+              
                   </div>
                 </Reveal>
               </div>
@@ -144,206 +139,49 @@ export default function Homepage() {
           </div>
         </section>
  
-        {/* Track Selector Section */}
-        <section id="tracks" className="bg-cream-50 py-24 md:py-32 border-b border-teal-900/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            {/* Section Heading */}
-            <div className="max-w-3xl mb-20">
-              <span className="text-xs font-mono tracking-widest text-teal-900/60 uppercase">
-                Choose Your Pathway
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-teal-900 mt-2 tracking-tight">
-                Two ways to secure your admission
-              </h2>
-              <p className="text-ink-900/70 mt-4 text-base md:text-lg leading-relaxed">
-                Choose the track that fits your decision style and immediate pain point.
-              </p>
-            </div>
- 
-            {/* Selector Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
-              
-              {/* Track A Card */}
-              <div className="relative group flex flex-col h-full bg-white border border-teal-900/10 rounded-3xl shadow-sm hover:shadow-md hover:border-red-500/30 transition-all duration-300 overflow-hidden">
-                {/* Card Image */}
-                <div className="relative w-full aspect-[16/10] bg-teal-900/5 overflow-hidden">
-                  <Image
-                    src="/images/track_professional.jpg"
-                    alt="Nigerian professional working"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-red-500">
-                    Fast Track
-                  </span>
-                </div>
- 
-                {/* Card Body */}
-                <div className="p-8 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="text-2xl font-bold text-teal-900 group-hover:text-red-500 transition-colors">
-                      &ldquo;I want this handled fast&rdquo;
-                    </h3>
-                    <p className="text-ink-900/70 mt-4 leading-relaxed">
-                      For time-poor applicants who want the direct outcome without the research burden. Focus on speed and direct results.
-                    </p>
-                    
-                    <ul className="mt-8 space-y-4 text-sm text-ink-900/80">
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 text-xs font-bold">✓</span>
-                        <span>Get direct answers on which courses and universities match your career goals fastest</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 text-xs font-bold">✓</span>
-                        <span>Bypass standard bottlenecks: learn how to secure IELTS waivers using work history</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-red-500/10 flex items-center justify-center text-red-500 text-xs font-bold">✓</span>
-                        <span>Accelerate the application: submit pre-screened files directly to admissions officers</span>
-                      </li>
-                    </ul>
-                  </div>
- 
-                  <div className="mt-8 pt-6 border-t border-teal-900/5">
-                    <Link
-                      href="/webinar/register?track=professional"
-                      className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full text-sm font-bold text-white bg-red-500 hover:bg-red-500/90 active:scale-[0.98] transition-all group/link shadow-md shadow-red-500/5"
-                    >
-                      Choose Fast Track
-                      <span className="ml-2 transform group-hover/link:translate-x-0.5 transition-transform">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
- 
-              {/* Track B Card */}
-              <div className="relative group flex flex-col h-full bg-white border border-teal-900/10 rounded-3xl shadow-sm hover:shadow-md hover:border-orange-500/30 transition-all duration-300 overflow-hidden">
-                {/* Card Image */}
-                <div className="relative w-full aspect-[16/10] bg-teal-900/5 overflow-hidden">
-                  <Image
-                    src="/images/track_parent.jpg"
-                    alt="Nigerian parent and daughter at home laptop"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-                  <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-bold text-white bg-orange-500">
-                    Full Detail
-                  </span>
-                </div>
- 
-                {/* Card Body */}
-                <div className="p-8 flex flex-col justify-between flex-grow">
-                  <div>
-                    <h3 className="text-2xl font-bold text-teal-900 group-hover:text-orange-500 transition-colors">
-                      &ldquo;I want to understand every step&rdquo;
-                    </h3>
-                    <p className="text-ink-900/70 mt-4 leading-relaxed">
-                      For sponsors and applicants who need the complete cost, fee, and risk picture before trusting a remote process. Focus on transparency.
-                    </p>
-                    
-                    <ul className="mt-8 space-y-4 text-sm text-ink-900/80">
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 text-xs font-bold">✓</span>
-                        <span>Inspect detailed tuition fee breakdowns, hidden living costs, and payment timelines</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 text-xs font-bold">✓</span>
-                        <span>Compile bulletproof proof of funds without locking up capital unnecessarily</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-500 text-xs font-bold">✓</span>
-                        <span>Establish direct communication with UK university counselors to ensure student safety</span>
-                      </li>
-                    </ul>
-                  </div>
- 
-                  <div className="mt-8 pt-6 border-t border-teal-900/5">
-                    <Link
-                      href="/webinar/register?track=parent"
-                      className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full text-sm font-bold text-white bg-orange-500 hover:bg-orange-500/90 active:scale-[0.98] transition-all group/link shadow-md shadow-orange-500/5"
-                    >
-                      Choose Full Detail Track
-                      <span className="ml-2 transform group-hover/link:translate-x-0.5 transition-transform">→</span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
- 
-            </div>
-          </div>
-        </section>
- 
-        {/* Why This Exists Section */}
-        <section className="bg-cream-50 py-24 md:py-32 border-b border-teal-900/5 relative">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-yellow-400/[0.02] rounded-full blur-3xl pointer-events-none" />
- 
+        {/* Why We're Hosting This For Free Section */}
+        <section id="why-free" className="bg-cream-50 py-24 md:py-32 border-b border-teal-900/5 relative">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-yellow-400/[0.03] rounded-full blur-3xl pointer-events-none" />
+
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div className="bg-white border border-teal-900/10 rounded-3xl p-8 sm:p-12 shadow-sm text-center md:text-left">
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div className="bg-white border border-teal-900/10 rounded-3xl p-8 sm:p-12 md:p-14 shadow-sm">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
                 
-                {/* Left Column */}
-                <div className="md:col-span-4 flex flex-col items-center md:items-start border-b md:border-b-0 md:border-r border-teal-900/10 pb-6 md:pb-0 md:pr-8">
-                  <span className="text-xs font-mono tracking-widest text-teal-900/60 uppercase">
-                    Our Mission
+                {/* Left Column - Heading */}
+                <div className="lg:col-span-5 flex flex-col items-start lg:border-r border-teal-900/10 lg:pr-10">
+                  <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase tracking-wider text-teal-900 bg-teal-900/5 border border-teal-900/10">
+                    Transparency & Value
                   </span>
-                  <h2 className="text-3xl font-bold text-teal-900 mt-2 tracking-tight leading-tight">
-                    Why We Created This Session
+                  <h2 className="text-3xl md:text-4xl font-bold text-teal-900 mt-4 tracking-tight leading-tight">
+                    Why we&apos;re hosting this for free:
                   </h2>
                 </div>
                 
-                {/* Right Column */}
-                <div className="md:col-span-8 space-y-6 text-ink-900/80 text-base sm:text-lg leading-relaxed">
+                {/* Right Column - Paragraphs */}
+                <div className="lg:col-span-7 space-y-6 text-ink-900/85 text-base sm:text-lg leading-relaxed">
                   <p>
-                    Most people who&apos;ve already decided the UK is right for them get stuck in the same place: conflicting advice from Facebook groups, WhatsApp forwards, and agents quoting wildly different numbers. That confusion — not qualifications, not money — is the actual obstacle.
+                    UK universities need qualified international applicants every single intake, because international tuition funds a real part of their budget.
+                  </p>
+                  <p className="font-semibold text-teal-900">
+                    Which means the door is already open, most people just do not know how to walk through it correctly.
                   </p>
                   <p>
-                    We built direct relationships with UK admissions teams so applicants could skip the slow public queue. This session is that process, explained once, live, instead of answered one DM at a time. After spending years navigating both banking and admissions systems in Nigeria, we designed a direct route that works.
+                    We built direct relationships with admissions teams so applicants would not have to go through the slow public queue everyone else is stuck in.
+                  </p>
+                  <p>
+                    This webinar exists because explaining that system properly, once, to a room full of people, is a far better use of an hour than answering the same five questions one DM at a time.
+                  </p>
+                  <p className="p-6 bg-cream-50 border border-teal-900/10 rounded-2xl text-teal-900 font-medium leading-relaxed">
+                    You are not being pitched something hidden behind a paywall. You are getting the same information we would give a paying client, for free, because the information itself is not the business. Helping you actually secure your offer is.
                   </p>
                 </div>
- 
+
               </div>
             </div>
           </div>
         </section>
  
-        {/* 24-Hour Timeline Section (First Dark Panel) */}
-        <section id="how-it-works" className="bg-gradient-to-br from-teal-900 to-ink-900 text-cream-50 py-24 md:py-32 relative">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-red-500/[0.01] rounded-full blur-3xl pointer-events-none" />
-          
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            
-            {/* Header copy */}
-            <Reveal className="max-w-3xl mx-auto mb-16">
-              <span className="text-xs font-mono tracking-widest text-yellow-400 uppercase">
-                The Signature Process
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-2 tracking-tight text-white leading-tight">
-                The 24-Hour Admissions Rail
-              </h2>
-              <p className="text-cream-50/70 mt-4 text-base md:text-lg leading-relaxed">
-                Here&apos;s what actually happens, hour by hour. Toggle between tracks to inspect the process details.
-              </p>
-            </Reveal>
- 
-            {/* The Timeline Rail Component */}
-            <Reveal delay={100}>
-              <TimelineRail />
-            </Reveal>
- 
-            {/* Action Call */}
-            <Reveal delay={200} className="mt-12 text-center">
-              <Link
-                href="/webinar/register"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full text-base font-bold text-ink-900 bg-yellow-400 hover:bg-yellow-400/90 active:scale-[0.98] transition-all duration-200 shadow-md shadow-yellow-400/5"
-              >
-                Reserve Your Seat on the Rail
-              </Link>
-            </Reveal>
-          </div>
-        </section>
+       
  
         {/* What You'll Learn Section (Editorial Split with Campus Image) */}
         <section className="bg-cream-50 py-24 md:py-32 border-b border-teal-900/5">
