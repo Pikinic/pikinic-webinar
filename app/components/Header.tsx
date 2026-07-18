@@ -49,18 +49,6 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/#tracks"
-            className="text-ink-900/70 hover:text-teal-900 transition-colors"
-          >
-            Tracks
-          </Link>
-          <Link
-            href="/#how-it-works"
-            className="text-ink-900/70 hover:text-teal-900 transition-colors"
-          >
-            How It Works
-          </Link>
-          <Link
             href="/#faq"
             className="text-ink-900/70 hover:text-teal-900 transition-colors"
           >
@@ -125,20 +113,6 @@ export default function Header() {
             className="block px-3 py-2 rounded-md text-base font-medium text-ink-900 hover:bg-teal-900/5 hover:text-teal-900"
           >
             Home
-          </Link>
-          <Link
-            href="/#tracks"
-            onClick={closeMenu}
-            className="block px-3 py-2 rounded-md text-base font-medium text-ink-900 hover:bg-teal-900/5 hover:text-teal-900"
-          >
-            Tracks
-          </Link>
-          <Link
-            href="/#how-it-works"
-            onClick={closeMenu}
-            className="block px-3 py-2 rounded-md text-base font-medium text-ink-900 hover:bg-teal-900/5 hover:text-teal-900"
-          >
-            How It Works
           </Link>
           <Link
             href="/#faq"
