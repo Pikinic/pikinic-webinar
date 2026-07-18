@@ -30,7 +30,7 @@ const faqItems: FaqItem[] = [
   },
   {
     question: "What happens after the webinar if I want to move forward?",
-    answer: "You will be shown exactly how the 24-hour offer process and the £3,000 deposit works, so you can decide for yourself with no pressure to commit on the spot.",
+    answer: "You will be shown exactly how the 24-48 hour offer process and the £3,000 deposit works, so you can decide for yourself with no pressure to commit on the spot.",
   },
 ];
 

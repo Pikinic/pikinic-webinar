@@ -118,7 +118,7 @@ function RegisterPageContent() {
   const gcalUrl = "https://www.google.com/calendar/render?action=TEMPLATE" + 
     "&text=" + encodeURIComponent("PiKiNiC UK University Admissions Webinar") +
     "&dates=20260721T190000Z/20260721T210000Z" +
-    "&details=" + encodeURIComponent("Join link and webinar access instructions will be sent via email.\n\nLearn the 24-hour admissions system Nigerian professionals and parents are using to secure UK university offers before the September intake closes.") +
+    "&details=" + encodeURIComponent("Join link and webinar access instructions will be sent via email.\n\nLearn the 24-48 hour admissions system Nigerian professionals and parents are using to secure UK university offers before the September intake closes.") +
     "&location=" + encodeURIComponent("Online (Join link to be emailed)") +
     "&sf=true&output=xml";
 
@@ -371,7 +371,7 @@ export default function RegisterPage() {
     },
     {
       q: "Do I need to have all my documents ready before attending?",
-      a: "No. The webinar is designed to show you what you need to prepare so that you can utilize the 24-hour admissions system effectively."
+      a: "No. The webinar is designed to show you what you need to prepare so that you can utilize the 24-48 hour admissions system effectively."
     },
     {
       q: "What if I cannot attend the live session?",

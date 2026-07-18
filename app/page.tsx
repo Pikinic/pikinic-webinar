@@ -42,7 +42,7 @@ export default function Homepage() {
                 {/* Headline */}
                 <Reveal delay={200} duration={600}>
                   <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-teal-900 tracking-tight leading-[1.05] font-sans">
-                    The <span className="text-red-500 relative inline-block">24-Hour System<span className="absolute bottom-1 left-0 w-full h-[6px] bg-yellow-400 -z-10" /></span> Nigerian Applicants Use To Get UK University Offers — Before The September Intake Closes
+                    The <span className="text-red-500 relative inline-block">24-48 Hour System<span className="absolute bottom-1 left-0 w-full h-[6px] bg-yellow-400 -z-10" /></span> Nigerian Applicants Use To Get UK University Offers — Before The September Intake Closes
                   </h1>
                 </Reveal>
  
@@ -233,9 +233,9 @@ export default function Homepage() {
                       —
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-teal-900">The 24-Hour Process</h4>
+                      <h4 className="text-xl font-bold text-teal-900">The 24-48 Hour Process</h4>
                       <p className="text-ink-900/70 mt-1.5 leading-relaxed">
-                        How our direct admissions route works, and how to prepare your documents to qualify for 24-hour turnaround. Get a copy of the exact document checklists used by top partners.
+                        How our direct admissions route works, and how to prepare your documents to qualify for 24-48 hour turnaround. Get a copy of the exact document checklists used by top partners.
                       </p>
                     </div>
                   </div>
@@ -348,7 +348,7 @@ export default function Homepage() {
                 <span className="text-6xl text-teal-900/20 font-serif absolute top-4 right-6 select-none pointer-events-none">&ldquo;</span>
                 
                 <p className="text-cream-50/80 leading-relaxed italic text-base relative z-10 pt-4">
-                  &ldquo;I was skeptical about the 24-hour offer, but after submitting my docs through PiKiNiC, I had my offer from a top UK university in exactly 18 hours. Saved me months of stress.&rdquo;
+                  &ldquo;I was skeptical about the 24 to 48-hour offer, but after submitting my docs through PiKiNiC, I had my offer from a top UK university in exactly 18 hours. Saved me months of stress.&rdquo;
                 </p>
                 <div className="mt-8 pt-4 border-t border-teal-900/20 flex items-center justify-between z-10">
                   <div>
@@ -442,7 +442,7 @@ export default function Homepage() {
                 September Intake Closes July 31st
               </h2>
               <p className="text-cream-50/70 mt-4 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-                Secure your seat today. Learn how to bypass the standard public wait lines and secure your UK offer in 24 hours. No cost, no obligation.
+                Secure your seat today. Learn how to bypass the standard public wait lines and secure your UK offer in 24 to 48 hours. No cost, no obligation.
               </p>
             </div>
  
