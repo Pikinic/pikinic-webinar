@@ -293,7 +293,7 @@ function RegisterPageContent() {
           {/* Form Field: Track selector */}
           <div>
             <label htmlFor="track" className="block text-sm font-semibold text-teal-900 mb-1.5">
-              I am registering as:
+              I am registering for:
             </label>
             <select
               id="track"
