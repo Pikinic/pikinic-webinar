@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "PiKiNiC — Get Your UK University Offer in 24 Hours",
+  title: "PiKiNiC — Get Your UK University Offer in 24-48 Hours",
   description: "Learn the direct admissions system Nigerian professionals and parents are using to secure UK offers before September intake closes.",
 };
 

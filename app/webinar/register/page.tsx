@@ -316,7 +316,7 @@ function RegisterPageContent() {
             disabled={isSubmitting}
             className={`w-full py-4 px-6 rounded-full text-base font-bold text-ink-900 bg-yellow-400 hover:bg-yellow-400/90 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 transition-all flex items-center justify-center`}
           >
-            Confirm My Free Seat
+            Register Now →
           </button>
         </form>
       ) : (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ScrollProgress from "./components/ScrollProgress";
@@ -7,6 +7,7 @@ import Countdown from "./components/Countdown";
 import TimelineRail from "./components/TimelineRail";
 import FaqAccordion from "./components/FaqAccordion";
 import Reveal from "./components/Reveal";
+import RegisterForm from "./components/RegisterForm";
 
 export default function Homepage() {
   return (
@@ -21,7 +22,7 @@ export default function Homepage() {
       <main className="flex-grow">
         
         {/* Hero Section */}
-        <section id="hero" className="bg-cream-50 pt-12 pb-24 md:py-32 border-b border-teal-900/5 relative">
+        <section id="hero" className="bg-cream-50 pt-12 pb-16 md:py-24 border-b border-teal-900/5 relative">
           <div className="absolute top-0 right-0 w-96 h-96 bg-teal-900/[0.02] rounded-full blur-3xl pointer-events-none -mr-32 -mt-32" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-red-500/[0.02] rounded-full blur-3xl pointer-events-none -ml-32 -mb-32" />
           
@@ -60,14 +61,13 @@ export default function Homepage() {
                 {/* Action Buttons */}
                 <Reveal delay={500} duration={600}>
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto pt-2">
-                    <Link
-                      href="/webinar/register"
+                    <a
+                      href="#register-section"
                       className="inline-flex items-center justify-center px-8 py-4 rounded-full text-base font-bold text-white bg-red-500 hover:bg-red-500/95 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-[0_4px_20px_rgba(237,50,55,0.2)] text-center group"
                     >
-                      Register now
+                      Register Now
                       <span className="ml-2 transform group-hover:translate-x-0.5 transition-transform">→</span>
-                    </Link>
-              
+                    </a>
                   </div>
                 </Reveal>
               </div>
@@ -94,8 +94,19 @@ export default function Homepage() {
             </div>
           </div>
         </section>
+
+        {/* Registration Section (Directly Under Hero) */}
+        <section id="register-section" className="bg-cream-50 py-12 md:py-16 border-b border-teal-900/5 relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <Reveal delay={100}>
+              <Suspense fallback={<div className="w-full max-w-xl mx-auto h-[480px] bg-white rounded-3xl animate-pulse shadow-sm" />}>
+                <RegisterForm />
+              </Suspense>
+            </Reveal>
+          </div>
+        </section>
  
-        {/* Trust Bar Section */}
+        {/* Trust Bar Section (Visa Completion Numbers) */}
         <section className="bg-cream-50 py-12 border-b border-teal-900/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 divide-y-0 lg:divide-x divide-teal-900/10 text-center lg:text-left py-4">
@@ -441,12 +452,12 @@ export default function Homepage() {
             </div>
  
             {/* CTA Button */}
-            <Link
-              href="/webinar/register"
+            <a
+              href="#register-section"
               className="inline-flex items-center justify-center px-10 py-5 rounded-full text-base font-bold text-ink-900 bg-yellow-400 hover:bg-yellow-400/90 active:scale-[0.98] transition-all duration-200 shadow-md shadow-yellow-400/5"
             >
-              Register for the free webinar →
-            </Link>
+              Register Now →
+            </a>
           </div>
         </section>
  
