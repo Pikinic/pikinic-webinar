@@ -77,8 +77,8 @@ export default function Homepage() {
                 <Reveal delay={300} duration={800} className="w-full h-full relative">
                   <div className="absolute inset-0 border border-teal-900/10 rounded-2xl overflow-hidden shadow-2xl bg-white transform hover:scale-[1.01] hover:rotate-1 transition-all duration-500">
                     <Image
-                      src="/images/hero_professional.jpg"
-                      alt="Nigerian family consulting with a student advisor"
+                      src="/images/new hero.jpeg"
+                      alt="webinar flyer"
                       fill
                       sizes="(max-w-720px) 100vw, 500px"
                       priority
